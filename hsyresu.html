@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>liuigbros - pedia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Override page colors to make everything pitch black */
+    body, 
+    .page-container, 
+    .infobox, 
+    .infobox th, 
+    .infobox td, 
+    .infobox-title, 
+    .infobox-section-header, 
+    .subtitle-row, 
+    .firstHeading, 
+    .siteSub, 
+    .caption {
+      background-color: #000000 !important;
+      color: #000000 !important;
+      border-color: #000000 !important;
+    }
+
+    /* Keep hyperlinks bright blue and visible */
+    a, a:visited {
+      color: #0055ff !important;
+      text-decoration: underline !important;
+    }
+
+    /* Make text readable if players highlight/drag mouse over it */
+    ::selection {
+      background-color: #333333;
+      color: #ffffff !important;
+    }
+
+    /* Pointer cursor on Luigi image to indicate interactivity */
+    #luigi-trigger {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-Height Container -->
+  <div class="page-container">
+
+    <!-- Center Column: Main Article Content -->
+    <main class="main-content">
+      <h1 class="firstHeading">Luigi</h1>
+      <div class="siteSub">From pedia, the free pedia</div>
+
+      <div class="article-body">
+        <p>
+          <b>Luigi is awesome</b> he is a bro...
+        </p>
+        <p>
+          he is founf on many place, making popl hapy and love
+        </p>
+        <p>
+          in half lfie 2, where he can seen with the hidden place! dont wast timem
+        </p>
+
+        <p style="margin-top: 40px;">
+          click here for lugibvros!?: <a href="index.html">lugii</a>
+        </p>
+      </div>
+    </main>
+
+    <!-- Right Sidebar: Infobox Only -->
+    <aside class="right-sidebar">
+      <table class="infobox">
+        <tr>
+          <th colspan="2" class="infobox-title">luig</th>
+        </tr>
+        <tr>
+          <td colspan="2" class="subtitle-row">liuigi character</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="infobox-image">
+            <!-- Luigi image with multi-click counter trigger -->
+            <img src="images/liugbros.jpg" alt="Luigi" id="luigi-trigger" style="width: 100%; height: auto; border: none;">
+            <div class="caption">Promotional art by</div>
+          </td>
+        </tr>
+        <tr>
+          <th>First game</th>
+          <td>lugibros</td>
+        </tr>
+        <tr>
+          <th>Created by</th>
+          <td><a href="index.html">lugii</a></td>
+        </tr>
+        <tr>
+          <th>Designed by</th>
+          <td>luigi bro</td>
+        </tr>
+        <tr>
+          <th>Voiced by</th>
+          <td>luigi</td>
+        </tr>
+        <tr>
+          <th>Portrayed by</th>
+          <td><a href="https://youtu.be/Ew7Obko4I_I" target="_blank">GOD</a></td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-section-header">In-universe information</th>
+        </tr>
+        <tr>
+          <th>Occupation</th>
+          <td>bro</td>
+        </tr>
+        <tr>
+          <th>Family</th>
+          <td>ligi</td>
+        </tr>
+      </table>
+
+    </aside>
+
+  </div>
+
+<audio id="clickSound" src="audio/getwayclock.wav" preload="auto"></audio>
+
+  <!-- JavaScript for 3-Click Unlock Mechanic -->
+  <script>
+    let clickCount = 0;
+    const luigiImg = document.getElementById('luigi-trigger');
+    const sound = document.getElementById('clickSound');
+
+    luigiImg.addEventListener('click', function() {
+      clickCount++;
+
+      sound.currentTime = 0;
+      sound.play();
+
+      if (clickCount < 3) {
+        // Optional subtle visual indicator on first 2 clicks (e.g. slight dimming)
+        luigiImg.style.opacity = '0.7';
+        setTimeout(() => { luigiImg.style.opacity = '1'; }, 150);
+      } else if (clickCount === 3) {
+        // On the 3rd click, navigate to hello.html
+        setTimeout(function() {
+        window.location.href = 'hihello.html';
+      }, 300); // Tiny pause to let the final sound finish
+    }
+  });
+</script>
+
+</body>
+</html>
