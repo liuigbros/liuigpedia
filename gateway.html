@@ -8,8 +8,21 @@
 </head>
 <body>
 
+  <audio id="luigiSound" src="audio/getwayclock.wav" preload="auto"></audio>
   <!-- Full-Height White Container -->
   <div class="page-container">
+
+    <!-- Left Sidebar: Table of Contents -->
+    <aside class="left-sidebar">
+      <div class="toc">
+        <div class="toc-header">
+          <strong>Contents</strong> <span class="toggle-link">hide</span>
+        </div>
+        <ul>
+          <li><span class="toc-number">1</span> <a href="#top">(Top)</a></li>
+        </ul>
+      </div>
+    </aside>
 
     <!-- Center Column: Main Article Content -->
     <main class="main-content">
@@ -46,7 +59,7 @@
           <td colspan="2" class="infobox-image">
          <!-- Wrap the img tag inside an <a> tag -->
          <a href="NEXT_PAGE_OR_URL_HERE">
-           <img src="images/liugbros.jpg" alt="Luigi" style="width: 100%; height: auto; border: none;">
+           <img src="images/liugbros.jpg" alt="Luigi" id="gateway-luigi" style="width: 100%; height: auto; border: none;">
          </a>
          <div class="caption">Promotional art by</div>
        </td>
@@ -87,6 +100,20 @@
     </aside>
 
   </div>
+
+<script>
+  const gatewayImg = document.getElementById('gateway-luigi');
+  const sound = document.getElementById('luigiSound');
+
+  gatewayImg.addEventListener('click', function(e) {
+    e.preventDefault();
+    sound.play();
+
+    setTimeout(function() {
+      window.location.href = 'hsyresu.html';
+    }, 500);
+  });
+</script>
 
 </body>
 </html>
