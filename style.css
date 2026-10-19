@@ -10,7 +10,7 @@ body {
 
 .page-container {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   align-items: start;
   gap: 24px;
   width: 100%;
@@ -21,6 +21,10 @@ body {
   padding: 30px;
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-container.has-toc {
+  grid-template-columns: 180px minmax(0, 1fr) 280px;
 }
 
 .left-sidebar {
@@ -103,10 +107,10 @@ body {
 
 .infobox {
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   table-layout: fixed;
   border: 1px solid rgba(0, 34, 102, 0.45);
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: #91c1fc;
   border-collapse: collapse;
   font-size: 15px;
 }
@@ -165,7 +169,7 @@ body {
 }
 
 .infobox-section-header {
-  background-color: #d7e7fb;
+  background-color: #86bdff;
   color: #0e132e;
   text-align: center !important;
   font-weight: bold;
@@ -181,20 +185,12 @@ a:hover {
 }
 
 @media (max-width: 1000px) {
-  .page-container {
-    grid-template-columns: 150px minmax(0, 1fr);
+  .page-container.has-toc {
+    grid-template-columns: 140px minmax(0, 1fr);
   }
 
-  .right-sidebar {
+  .page-container.has-toc .right-sidebar {
     grid-column: 2;
-  }
-
-  .raw-page .page-container {
-    grid-template-columns: minmax(0, 1fr) 280px;
-  }
-
-  .raw-page .right-sidebar {
-    grid-column: auto;
   }
 }
 
@@ -203,7 +199,8 @@ a:hover {
     padding: 20px 12px;
   }
 
-  .page-container {
+  .page-container,
+  .page-container.has-toc {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -242,7 +239,7 @@ a:hover {
 }
 
 .raw-page .page-container {
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   background: #000000;
   box-shadow: none;
 }
