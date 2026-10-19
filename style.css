@@ -10,7 +10,7 @@ body {
 
 .page-container {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr) 250px;
+  grid-template-columns: 180px minmax(0, 1fr) 320px;
   align-items: start;
   gap: 24px;
   width: 100%;
@@ -103,6 +103,8 @@ body {
 
 .infobox {
   width: 100%;
+  max-width: 320px;
+  table-layout: fixed;
   border: 1px solid rgba(0, 34, 102, 0.45);
   background-color: rgba(255, 255, 255, 0.82);
   border-collapse: collapse;
@@ -114,6 +116,10 @@ body {
   border-bottom: 1px solid rgba(0, 34, 102, 0.18);
   text-align: left;
   vertical-align: top;
+}
+
+.infobox tr > th:not([colspan]) {
+  width: 36%;
 }
 
 .infobox-title {
@@ -134,6 +140,8 @@ body {
 }
 
 .infobox-image img {
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -180,6 +188,14 @@ a:hover {
   .right-sidebar {
     grid-column: 2;
   }
+
+  .raw-page .page-container {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+
+  .raw-page .right-sidebar {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 650px) {
@@ -216,6 +232,67 @@ a:hover {
 
   .article-body {
     font-size: 18px;
+  }
+}
+
+.raw-page {
+  padding: 0;
+  color: #000000;
+  background: #000000;
+}
+
+.raw-page .page-container {
+  grid-template-columns: minmax(0, 1fr) 320px;
+  background: #000000;
+  box-shadow: none;
+}
+
+.raw-page .main-content {
+  padding: 0;
+}
+
+.raw-page .article-body,
+.raw-page .siteSub,
+.raw-page .caption,
+.raw-page .infobox,
+.raw-page .infobox th,
+.raw-page .infobox td,
+.raw-page .infobox-title,
+.raw-page .infobox-section-header,
+.raw-page .subtitle-row {
+  color: #000000;
+  background: #000000;
+  border-color: #000000;
+}
+
+.raw-page .firstHeading {
+  color: #000000;
+  background: none;
+  -webkit-text-fill-color: #000000;
+  text-shadow: none;
+  animation: none;
+  border-color: #000000;
+  text-align: left;
+}
+
+.raw-page a,
+.raw-page a:visited,
+.raw-page a:hover {
+  color: #000000;
+}
+
+.raw-page #luigi-trigger {
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .raw-page .page-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .raw-page .right-sidebar {
+    width: 100%;
   }
 }
 
