@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>liuigbros - pedia</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Override page colors to make everything pitch black */
+    body, 
+    .page-container, 
+    .infobox, 
+    .infobox th, 
+    .infobox td, 
+    .infobox-title, 
+    .infobox-section-header, 
+    .subtitle-row, 
+    .firstHeading, 
+    .siteSub, 
+    .caption {
+      background-color: #000000 !important;
+      color: #000000 !important;
+      border-color: #000000 !important;
+    }
+
+    /* Keep hyperlinks bright blue and visible */
+    a, a:visited {
+      color: #0055ff !important;
+      text-decoration: underline !important;
+    }
+
+    /* Make text readable if players highlight/drag mouse over it */
+    ::selection {
+      background-color: #333333;
+      color: #ffffff !important;
+    }
+
+    /* Pointer cursor on Luigi image to indicate interactivity */
+    #luigi-trigger {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-Height Container -->
+  <div class="page-container">
+
+    <!-- Center Column: Main Article Content -->
+    <main class="main-content">
+      <div class="article-body">
+        <p>
+         idont know how much linger i acn keep this up. i hate this damn place.
+        </p>
+        <p>
+          wish i could go awy like he did.i used to think he was wrong, people used to tell me that anyway.
+          i can't stand it anymore, these people are so cruel, it's absurd, it's insane.
+        </p>
+        <p>
+          can't even do the stuff i like without them coming over to ask stuff. no i haven't prayed yet, fuck off, let me do my thing.
+        </p>
+
+        <p style="margin-top: 40px;">
+          i hate seeing the bodies <a href="index.html">lugii</a>
+          how do they do it?
+        </p>
+        <p>
+          i can't belive the stuff i used to say about him. i just agreed with whatever they said. i thought they were right. i don't what's worse.
+          i need this. it's the only way i can make sense of anything. 
+        </p>
+      </div>
+    </main>
+
+    <!-- Right Sidebar: Infobox Only -->
+    <aside class="right-sidebar">
+      <table class="infobox">
+        <tr>
+          <th colspan="2" class="infobox-title">luig</th>
+        </tr>
+        <tr>
+          <td colspan="2" class="subtitle-row">liuigi character</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="infobox-image">
+            <a href="FAILFAILED.html">
+            <img src="images/hihello.jpg" alt="Luigi" id="hello-trigger" style="width: 100%; height: auto; border: none;">
+            <div class="caption">Promotional art by</div>
+          </td>
+        </tr>
+        <tr>
+          <th>First game</th>
+          <td>lugibros</td>
+        </tr>
+        <tr>
+          <th>Created by</th>
+          <td><a href="index.html">lugii</a></td>
+        </tr>
+        <tr>
+          <th>Designed by</th>
+          <td>luigi bro</td>
+        </tr>
+        <tr>
+          <th>Voiced by</th>
+          <td>luigi</td>
+        </tr>
+        <tr>
+          <th>Portrayed by</th>
+          <td><a href="https://youtu.be/Ew7Obko4I_I" target="_blank">GOD</a></td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-section-header">In-universe information</th>
+        </tr>
+        <tr>
+          <th>Occupation</th>
+          <td>bro</td>
+        </tr>
+        <tr>
+          <th>Family</th>
+          <td><a href="PAGAN.html" target="_blank">ligi</a></td>
+        </tr>
+      </table>
+
+    </aside>
+
+  </div>
+
+<audio id="clickSound" src="audio/getwayclock.wav" preload="auto"></audio>
+
+  <script>
+    const helloImg = document.getElementById('hello-trigger');
+    const sound = document.getElementById('clickSound');
+
+    helloImg.addEventListener('click', function(e) {
+    e.preventDefault();
+    sound.play();
+      
+    setTimeout(function() {
+      window.location.href = 'FAILFAILED.html';
+      }, 300); // Tiny pause to let the final sound finish
+    }
+  );
+</script>
+
+</body>
+</html>
